@@ -10,5 +10,5 @@ func _ready():
 	# Añadirla como hija de esta escena
 	add_child(diary_ui)
 	
-	# Añadir al grupo "UI" para que los fragmentos puedan comunicarse con ella
+	# Añadirla al grupo "UI" para que los fragmentos puedan comunicarse con ella
 	diary_ui.add_to_group("UI")
