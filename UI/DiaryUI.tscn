@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://by4qaro27ch4d"]
+
+[ext_resource type="Script" uid="uid://djrncwyw4ws5o" path="res://Scripts/diary_ui.gd" id="1_tbr86"]
+[ext_resource type="Texture2D" uid="uid://gs4ffe0cnh0l" path="res://Assets/pergamino.png" id="2_m8evq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q4fjn"]
+texture = ExtResource("2_m8evq")
+
+[node name="DiaryUI" type="CanvasLayer"]
+script = ExtResource("1_tbr86")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 45.0
+offset_top = 35.0
+offset_right = 1106.0
+offset_bottom = 619.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_q4fjn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CerrarButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 492.0
+offset_right = 543.0
+offset_bottom = 523.0
+text = "Cerrar"
+
+[connection signal="pressed" from="Panel/CerrarButton" to="." method="_on_Button_pressed"]
